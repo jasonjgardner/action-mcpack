@@ -9,15 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v2
       - name: Create archive
-        with:
-          PACK_NAME: RP
         env:
+          RP_PACK_NAME: RP
           RP_DIR: ./RP
-        shell: bash
-        working-directory: ${{ github.workspace }}
-        run: |
-          tar -a -c -f ${{ github.INPUT_PACK_NAME }}.mcpack ${{ env.RP_DIR }}
+        run: tar -a -c -f ${{ env.RP_PACK_NAME }}.mcpack ${{ env.RP_DIR }}
