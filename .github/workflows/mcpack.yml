@@ -1,8 +1,6 @@
 name: mcpack
 on:
   push:
-    branches:
-      - main
     tags:
       - v1.*
   # Allows you to run this workflow manually from the Actions tab
@@ -15,10 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Create archive
+        with:
+          PACK_NAME: RP
         env:
           RP_DIR: ./RP
-          PACK_NAME: ${{ github.ref }}
         shell: bash
         working-directory: ${{ github.workspace }}
         run: |
-          tar -a -c -f ${{ env.PACK_NAME }}.mcpack $RP_DIR
+          tar -a -c -f ${{ github.INPUT_PACK_NAME }}.mcpack ${{ env.RP_DIR }}
