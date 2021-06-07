@@ -1,0 +1,25 @@
+name: 'mcpack Action'
+description: 'Action packed Minecraft archives!'
+author: 'jasonjgardner'
+
+branding:
+  icon: 'box'
+  color: 'green'
+
+inputs:
+  RP_PATH:
+    description: Resource pack path in workspace
+    default: ${{ github.workspace }}/RP/
+    required: true
+  BP_PATH:
+    description: Behavior pack path in workspace
+    default: ${{ github.workspace }}/bP/
+    required: false
+
+#outputs:
+#  result:
+#    description: action result
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

@@ -1,0 +1,37 @@
+{
+  "name": "action-mcpack",
+  "version": "1.0.0-beta",
+  "description": "GitHub Actions for Minecraft Bedrock add-ons",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonjgardner/action-mcpack.git"
+  },
+  "keywords": [
+    "minecraft",
+    "github-action",
+    "mcpack",
+    "mcaddon",
+    "mcworld",
+    "mctemplate",
+    "action",
+    "javascri-action"
+  ],
+  "author": "Jason Gardner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonjgardner/action-mcpack/issues"
+  },
+  "homepage": "https://github.com/jasonjgardner/action-mcpack#readme",
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.6",
+    "prettier": "^2.3.1"
+  }
+}
