@@ -4,7 +4,7 @@
   "description": "GitHub Actions for Minecraft Bedrock add-ons",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "package": "ncc build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,11 @@
     "action",
     "javascri-action"
   ],
-  "author": "Jason Gardner",
+  "author": {
+    "name": "Jason Gardner",
+    "email": "hi@jasongardner.co",
+    "url": "https://jasongardner.co"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jasonjgardner/action-mcpack/issues"
@@ -31,7 +35,6 @@
     "@actions/github": "^5.0.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.28.6",
-    "prettier": "^2.3.1"
+    "@vercel/ncc": "^0.28.6"
   }
 }
